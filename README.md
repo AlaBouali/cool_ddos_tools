@@ -15,13 +15,13 @@
 <h4>for linux:</h4>
 <code>sudo apt-get update -y && sudo apt-get install tor -y
 </code>
-to run TOR service:
+to run TOR service:<br>
 <code>sudo service tor start
 </code>
 <h4>for termux:</h4>
 <code>apt update -y && apt install tor -y
 </code>
-to run TOR service:
+to run TOR service:<br>
 <code>tor
 </code>
 
