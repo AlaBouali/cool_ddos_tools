@@ -119,7 +119,7 @@ print(bane.Fore.RESET)
 while True:
     try:
         time.sleep(1)
-        sys.stdout.write("\{}Total: {} {}| {}success => {} {}| {}Fails => {}{}".format(
+        sys.stdout.write("\r{}Total: {} {}| {}success => {} {}| {}Fails => {}{}".format(
             bane.Fore.BLUE,
             http_flooder_instance.counter+http_flooder_instance.fails,
             bane.Fore.WHITE,
