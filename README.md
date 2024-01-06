@@ -28,7 +28,8 @@ to run TOR service:<br>
 
 <h2>cloning the repo:</h2>
 <code>git clone https://github.com/AlaBouali/cool_ddos_tools
-cd cool_ddos_tools
+</code>
+<code>cd cool_ddos_tools
 </code>
 <h2>installation:</h2>
 
