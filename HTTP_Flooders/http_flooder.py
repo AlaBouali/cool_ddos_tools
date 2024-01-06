@@ -63,7 +63,7 @@ while True:
 while True:
     try:
         method = int(input(bane.Fore.GREEN + '\nAttack method: \n\t1- GET \n\t2- POST \n\t3- GET + POST\n' + bane.Fore.WHITE))
-        if duration [1,2,3] :
+        if method [1,2,3] :
             break
         print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
     except:
