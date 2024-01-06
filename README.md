@@ -42,6 +42,6 @@ to run TOR service:<br>
 <code>sudo pip3 install -r requirements.txt
 </code>
 <h2>Running the tools:</h2>
-<h3>HTTP spamming tool:</h3>
+<h3>HTTP Flood tool:</h3>
 <code>python3 ./HTTP/http_flooder.py
 </code>
