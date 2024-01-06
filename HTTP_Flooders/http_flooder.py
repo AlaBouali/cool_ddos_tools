@@ -86,6 +86,10 @@ while True:
 if spam_mode==True:
     http_flooder_instance = bane.HTTP_Spam(target,p=port,timeout=timeout,threads=threads, duration=duration, tor=tor, logs=True,method=method)
 else:
+    if port==443:
+        target="https://"+target+'/'
+    else:
+        target="http://"+target+':'+str(port)+'/'
     scraped_urls=1
     while True:
         try:
