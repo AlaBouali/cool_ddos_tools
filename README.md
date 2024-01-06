@@ -43,5 +43,5 @@ to run TOR service:<br>
 </code>
 <h2>Running the tools:</h2>
 <h3>HTTP spamming tool:</h3>
-<code>python3 ./HTTP_Flooders/http_flooder.py
+<code>python3 ./HTTP/http_flooder.py
 </code>
