@@ -45,3 +45,6 @@ to run TOR service:<br>
 <h3>HTTP Flood tool:</h3>
 <code>python3 ./HTTP/http_flooder.py
 </code>
+<img src="https://github.com/AlaBouali/cool_ddos_tools/blob/main/screenshots/HTTP/tool_screenshot.png">
+<img src="https://github.com/AlaBouali/cool_ddos_tools/blob/main/screenshots/HTTP/dstat_10k.png">
+<img src="https://github.com/AlaBouali/cool_ddos_tools/blob/main/screenshots/HTTP/dstat_10k_2.png">
