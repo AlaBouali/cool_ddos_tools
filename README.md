@@ -1,4 +1,9 @@
 # Some cool D(D)oS tools that i have developed based on "bane"
+
+<h2>Context:</h2>
+<p>This repo contains sophisticated and advanced DDoS tools and botnets based on TOR. When allowing the attack to go through TOR's network using "bane" library, each request exits from random and different exit node ( = different IP for each request ) to mimic a large botnet thanks to its capabilities to reach more than 10k requests per second for some tools.</p>
+<h2>DISCLAIMER</h2>
+<p>This repo is intended exclusively for educational purposes and ethical use with the explicit permission from the people who this tool is used against. The author of this code expressly disclaims any responsibility for any misuse or improper application of this library. It is imperative to emphasize that the user, and the user alone, bears full accountability for their actions when utilizing this library. Any legal ramifications stemming from the misuse of this library are solely the responsibility of the user, and the author shall not be held liable for any such consequences. By utilizing this library, users are acknowledging their understanding and acceptance of these terms and conditions.</p>
 <h2>installing Git:</h2>
 <h4>for windows:</h4>
  download Git from <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>
